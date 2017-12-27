@@ -3,6 +3,11 @@ cmake_minimum_required (VERSION 2.8)
 set(PROJECT_NAME_STR yapl)
 project (${PROJECT_NAME_STR})
 
+# Path for additional CMake modules
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake.modules)
+
+include(${CMAKE_MODULE_PATH}/build-external.cmake)
+
 # Local project include directory
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
